@@ -1,0 +1,55 @@
+@startuml
+
+'Translation unit: ./in/graph.hpp
+'Translation unit: ./in/main.cpp
+'Translation unit: ./in/graph.cpp
+class CGraph {
+	+CGraph(const char *m="Graph", double c=0, double s=0)
+	+virtual void print()
+	+int test3;
+	#const char *name;
+	#double circum;
+	#double square;
+	-int test2;
+}
+
+class CCircle {
+	+CCircle(const char *m="Circle",double c=0, double s=0, double r = 0)
+	+void change(double r)
+	+void print()
+	-double radius;
+}
+
+class CRectangle {
+	+CRectangle(const char *m="Rectangle", double c=0, double s=0, double l =0, double w = 0)
+	+void change(double l,double w)
+	+void print()
+	-double length,width;
+}
+
+class CTriangle {
+	+CTriangle(const char *m="Triangle",double c=0, double s=0, double A = 0, double B=0, double C=0)
+	+void change(double sideA,double sideB,double sideC)
+	+void print()
+	-void test()
+	-double SideA, SideB, SideC;
+}
+
+	'### CCircle :  CGraph
+"CGraph" <|-- "CCircle"
+
+
+	'### CRectangle :  CGraph
+"CGraph" <|-- "CRectangle"
+
+
+	'### CTriangle :  CGraph
+"CGraph" <|-- "CTriangle"
+
+
+	'################ CGraph ##########################
+	'################ CCircle ##########################
+	'################ CRectangle ##########################
+	'################ CTriangle ##########################
+@enduml
+
