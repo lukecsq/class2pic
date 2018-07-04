@@ -2,19 +2,19 @@
 C++源代码自动分析工具，得到UML类图、函数间调用关系网图及相关文档
 
 配置：
--java 
+--java 
 
-  自行配置JDK
+    自行配置JDK
 
--graphviz
+--graphviz
 
-  sudo apt install graphviz
+    sudo apt install graphviz
 
--libclang
+--libclang
 
-  sudo apt-get install libclang-dev
+    sudo apt-get install libclang-dev
   
-  sudo ln -s /usr/lib/llvm-3.8/lib/libclang.so /usr/lib/libclang.so
+    sudo ln -s /usr/lib/llvm-3.8/lib/libclang.so /usr/lib/libclang.so
   
   其中“llvm-3.8”根据安装的实际版本修改版本号
 
